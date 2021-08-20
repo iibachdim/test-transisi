@@ -44,7 +44,7 @@ class CompanyController extends Controller
         $logo = $request->file('logo');
 
         $nama_logo = time()."_".$logo->getClientOriginalName();
-        $upload = 'transisi';
+        $upload = 'company';
         $logo->move($upload, $nama_logo);
 
         $companies = Company::create([
@@ -99,7 +99,7 @@ class CompanyController extends Controller
         $logo = $request->file('logo');
 
         $nama_logo = time()."_".$logo->getClientOriginalName();
-        $upload = 'transisi';
+        $upload = 'company';
         $logo->move($upload, $nama_logo);
 
         $company = Company::find($company->id);

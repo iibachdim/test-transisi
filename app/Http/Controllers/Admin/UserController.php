@@ -90,7 +90,11 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->update($request->all());
+        $user->update([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password'))
+        ]);
         $user->roles()->sync($request->input('roles', []));
 
         return redirect()->route('admin.users.index');

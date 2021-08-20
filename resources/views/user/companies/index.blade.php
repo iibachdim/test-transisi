@@ -32,7 +32,7 @@
                     @foreach($companies as $key => $company)
                         <tr data-entry-id="{{ $company->id }}">
                             <td>
-                                <img width="100px" src="{{ url('/transisi/'.$company->logo) }}">
+                                <img width="100px" src="{{ url('/company/'.$company->logo) }}">
                             </td>
                             <td>
                                 {{ $company->nama ?? '' }}
@@ -41,7 +41,7 @@
                                 {{ $company->email ?? '' }}
                             </td>
                             <td>
-                                {{ $company->website }}
+                                <a href="#">{{ $company->website }}</a>
                             </td>
                             <td>
                                 <a class="btn btn-xs btn-primary" href="{{ route('user.companies.show', $company->id) }}">

@@ -9,7 +9,7 @@
     <div class="card-body">
         <div class="form-group">
             <div class="text-center">
-                <img width="200" src="{{ url('/transisi/'.$company->logo) }}" class="rounded mx-auto d-block">
+                <img width="200" src="{{ url('/company/'.$company->logo) }}" class="rounded mx-auto d-block">
             </div>
             <br>
             <table class="table table-bordered table-striped">
